@@ -15,7 +15,13 @@ int main(void)
 
     // get the change owed
     int numberOfCoins, remainingChange, quarters, dimes, nickels, pennies;
-    float changeOwed = get_float("Change owed: ");
+    float changeOwed;
+    
+    do
+	{
+        changeOwed = get_float("Change owed: ");
+    }
+	while(changeOwed < 0);
 
     // convert to cents to avoid float precision issues
     int cents = round(changeOwed * 100);
@@ -56,3 +62,4 @@ int getCoinRemainder(int change, int coinValue)
 {
     return change % coinValue;
 }
+
