@@ -1,0 +1,22 @@
+ ./caesar 13
+plaintext:  be sure to drink your Ovaltine
+ciphertext: or fher gb qevax lbhe Binygvar
+
+$ ./caesar 1 2 3
+Usage: ./caesar key
+
+check user cli args
+if cli args !== 2 or if user arg[1] is != integer
+  display usage message
+  exit
+
+while !plaintext ask user for plaintext
+
+foreach character in plaintext
+  if character in range a-zA-Z
+    shift charcter by key and store in array
+  else
+    add character to output array
+    
+for each character in output array
+  output character
